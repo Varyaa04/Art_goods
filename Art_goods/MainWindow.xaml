@@ -1,0 +1,38 @@
+﻿<Window x:Class="Art_goods.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Art_goods"
+        mc:Ignorable="d"
+            WindowStartupLocation="CenterOwner"
+        Title="Вход" Height="760" Width="1300">
+
+    <Grid Background="#FFFF9393" HorizontalAlignment="Center" Width="1486" Margin="0,0,0,-6">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1013*"/>
+            <ColumnDefinition Width="75*"/>
+            <ColumnDefinition Width="398*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100*"></RowDefinition>
+
+            <RowDefinition Height="350*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Frame x:Name="FrmMain" Content="Frame" VerticalAlignment="Center" HorizontalAlignment="Left" Width="1300" Height="553" Grid.Row="1" Navigated="FrmMain_Navigated" Grid.ColumnSpan="3" Margin="93,0,0,0" >
+            <UIElement.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </UIElement.RenderTransform>
+        </Frame>
+        <StackPanel HorizontalAlignment="Center" Height="110" Margin="0,10,0,0" VerticalAlignment="Top" Width="530" Orientation="Horizontal">
+            <Image Height="74" Width="107" Margin="35,0,0,0" Source="/p1firecl47iuaqna7hpof1krjm-0a170451df9121edbd634d5e6b1249a1.png"/>
+            <TextBlock Height="38" TextWrapping="Wrap" Width="177" FontSize="25" VerticalAlignment="Center" Margin="115,0,0,0" FontFamily="Microsoft YaHei UI Light" FontStyle="Italic" FontWeight="Bold" Text="{Binding ElementName=FrmMain, Path=Content.Title}"><Run Language="ru-ru" Text="Авторизация"/></TextBlock>
+
+        </StackPanel>
+    </Grid>
+</Window>
